@@ -32,7 +32,7 @@ public class paraconstructor
         student random2 = new student();     //calling constructor's ref variable
 
         student s1 = new student(12,"Pragyandeep",86.5f);
-        student s2 = new student(13,"Sung jin woo", 76.45f);
+        student s2 = new student(13,"Rahul", 76.45f);
 
         System.out.println(s1.name + "  " + s1.roll_no + "  " + s1.marks);
         System.out.println(s2.name + "  " + s2.roll_no + "  " + s2.marks);
