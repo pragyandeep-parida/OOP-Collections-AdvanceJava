@@ -1,0 +1,97 @@
+🔹 6. try-catch Block
+
+Definition:
+Used to handle exceptions by wrapping risky code.
+
+Syntax:
+try {
+    // risky code
+} catch (Exception e) {
+    // handling code
+}
+
+Example:
+try {
+    int a = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+}
+
+🔹 7. Multiple Catch Blocks
+
+Definition:
+Used to handle different types of exceptions separately.
+
+Rule:
+Always write specific exception first, then general (Exception).
+
+Example:
+
+try {
+    int[] arr = new int[3];
+    arr[5] = 10;
+} catch (ArithmeticException e) {
+    System.out.println("Arithmetic error");
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Index error");
+} catch (Exception e) {
+    System.out.println("General error");
+}
+
+
+🔹 8. finally BLOCK
+
+Definition:
+Block that always executes whether exception occurs or not.
+
+Use:
+Used for cleanup operations (closing files, DB connections, etc.)
+
+Example:
+
+try {
+    int a = 10 / 0;
+} catch (Exception e) {
+    System.out.println("Error occurred");
+} finally {
+    System.out.println("Always runs");
+}
+
+
+🔹 9. throw Keyword
+
+Definition:
+Used to explicitly throw an exception.
+
+Syntax: throw new ExceptionType("message");
+
+Example:
+
+int age = 15;
+
+if (age < 18) {
+    throw new ArithmeticException("Not eligible");
+}
+
+
+🔹 10. throws Keyword
+
+Definition:
+Used in method declaration to declare exceptions.
+
+Purpose:
+Informs the caller that the method may throw an exception.
+
+Example:
+
+static void check() throws Exception {
+    throw new Exception("Error here");
+}
+
+Usage:
+
+try {
+    check();
+} catch (Exception e) {
+    System.out.println(e.getMessage());
+}
